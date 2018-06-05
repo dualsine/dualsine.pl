@@ -35,6 +35,7 @@ window.onload = () ->
 	window.scene.add( window.point_light )
 
 	loader = new THREE.GLTFLoader()
+	loader.setDRACOLoader( new THREE.DRACOLoader() );
 	window.shapes = []
 	loader.load 'models/untitled.gltf', ( gltf ) ->
 		gltf.scene.traverse ( child ) ->

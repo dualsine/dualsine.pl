@@ -27,6 +27,7 @@
     window.point_light.position.set(0, 0, 10);
     window.scene.add(window.point_light);
     loader = new THREE.GLTFLoader();
+    loader.setDRACOLoader(new THREE.DRACOLoader());
     window.shapes = [];
     loader.load('models/untitled.gltf', function(gltf) {
       gltf.scene.traverse(function(child) {
